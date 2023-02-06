@@ -41,49 +41,70 @@
         </ul>
       </div>
     </div>
-    <nav class="navbar sticky-top navbar-expand-lg bg-light">
-      <div class="container">
-        <a class="navbar-brand" href="../index.html">
-          <h2 class="fs-2 text-center">SB<sup class="fs-5">fit</sup></h2>
-          <h2 class="fs-5">Salud y Vida</h2>
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-lg-auto">
-            <li class="nav-item fs-5 text-white">
-              <a
-                class="nav-link active"
-                aria-current="page"
-                href="../index.html"
-                >Inicio</a
-              >
-            </li>
-            <li class="nav-item fs-5">
-              <a class="nav-link active" href="mision.html">Nuesta Misión</a>
-            </li>
-            <li class="nav-item fs-5">
-              <a class="nav-link active" href="galeria.html">Galeria</a>
-            </li>
-            <li class="nav-item fs-5">
-              <a class="nav-link active" href="deporte.html">Deportes</a>
-            </li>
-            <li class="nav-item fs-5">
-              <a class="nav-link active" href="contacto.html">Contacto</a>
-            </li>
-          </ul>
+    <header>
+      <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <h2 class="fs-2 text-center">SB<sup class="fs-5">fit</sup></h2>
+            <h2 class="fs-5">Salud y Vida</h2></a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ms-lg-auto">
+              <li class="nav-item fs-5">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="../index.html"
+                  >Inicio</a
+                >
+              </li>
+              <li class="nav-item fs-5">
+                <a class="nav-link active" href="galeria.html">Galeria</a>
+              </li>
+              <li class="nav-item fs-5">
+                <a class="nav-link active" href="deporte.html">Deportes</a>
+              </li>
+              <li class="nav-item dropdown fs-5">
+                <a
+                  class="nav-link active dropdown-toggle"
+                  href="mision.html"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Nuestra Misión
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="mision.html"
+                      >Nuestra Misión</a
+                    >
+                  </li>
+                  <li><a class="dropdown-item" href="#">Sentirse Bien</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Recetas</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item fs-5">
+                <a class="nav-link active" href="contacto.html">Contacto</a>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </header>
     <section class="section">
       <div class="card mx-2 mt-3 border-2 border-white bg-transparent">
         <div class="card-body h-100">
@@ -114,16 +135,16 @@
       </div>
     </section>
     <div class="caja-contenedora">
-      <form action="">
-        <div class="container">
-          <h2 class="h2 text-center text-white mt-3">FORMULARIO DE CONTACTO</h2>
+      <form>
+        <div class="container-form">
+          <h2 class="h2 text-center text-white mt-5">FORMULARIO DE CONTACTO</h2>
           <div class="form-1">
             <label class="text-white">Nombre y Apellido</label>
             <input type="text" />
           </div>
           <div class="form-1">
             <label for="" class="text-white">Fecha de Nacimiento</label>
-            <input type="date" width="500px " />
+            <input type="date" />
           </div>
           <div class="form-1">
             <label for="region" class="text-white">País</label>
@@ -181,7 +202,7 @@ Escriba su comentario</textarea
           </a>
           <a href="http://twitter.com">
             <img class="redes-sociales" src=/img/icons8-twitter-48(color).png
-            alt="twitter"
+            alt="twitter">
           </a>
         </div>
         <small class="text-center">

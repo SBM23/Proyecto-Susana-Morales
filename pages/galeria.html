@@ -41,49 +41,74 @@
         </ul>
       </div>
     </div>
-    <nav class="navbar sticky-top navbar-expand-lg bg-light">
-      <div class="container">
-        <a class="navbar-brand" href="../index.html">
-          <h2 class="fs-2 text-center">SB<sup class="fs-5">fit</sup></h2>
-          <h2 class="fs-5">Salud y Vida</h2>
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-lg-auto">
-            <li class="nav-item fs-5">
-              <a
-                class="nav-link active"
-                aria-current="page"
-                href="../index.html"
-                >Inicio</a
-              >
-            </li>
-            <li class="nav-item fs-5">
-              <a class="nav-link active" href="mision.html">Nuesta Misión</a>
-            </li>
-            <li class="nav-item fs-5">
-              <a class="nav-link active" href="galeria.html">Galeria</a>
-            </li>
-            <li class="nav-item fs-5">
-              <a class="nav-link active" href="deporte.html">Deportes</a>
-            </li>
-            <li class="nav-item fs-5">
-              <a class="nav-link active" href="contacto.html">Contacto</a>
-            </li>
-          </ul>
+    <header class="sticky-top">
+      <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <h2 class="fs-2 text-center">SB<sup class="fs-5">fit</sup></h2>
+            <h2 class="fs-5">Salud y Vida</h2></a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ms-lg-auto">
+              <li class="nav-item fs-5">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="../index.html"
+                  >Inicio</a
+                >
+              </li>
+              <li class="nav-item fs-5">
+                <a class="nav-link active" href="galeria.html">Galeria</a>
+              </li>
+              <li class="nav-item fs-5">
+                <a class="nav-link active" href="deporte.html">Deportes</a>
+              </li>
+              <li class="nav-item dropdown fs-5">
+                <a
+                  class="nav-link active dropdown-toggle"
+                  href="mision.html"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Nuestra Misión
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="mision.html">Nuesta Misón</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./mision.html#comer-sano"
+                      >Recetas</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./mision.html#sientase-bien"
+                      >Sentirse Bien</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item fs-5">
+                <a class="nav-link active" href="contacto.html">Contacto</a>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </header>
     <main>
       <section class="box-recipe mb-3">
         <div class="card-img">

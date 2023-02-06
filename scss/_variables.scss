@@ -1,0 +1,40 @@
+//Variables para estilos generales//
+//Colotes//
+$text: white;
+$enlaces: rgb(12, 12, 152);
+
+//Fuentes//
+$fuente-secundaria: italic;
+$titulo-primario: 2rem;
+$titulo-secundario: 1.5rem;
+$list: 1.2rem;
+$listchico: 0.5rem;
+
+//Margenes//
+$espaciado: 20px 50px;
+$top: 6rem;
+$espaciadoChico: 10px 5px;
+//mixins//
+@mixin box {
+  margin-top: $top;
+  background-color: $text;
+  color: black;
+  border: thin solid;
+  box-shadow: 0px 0px 10px green;
+}
+@mixin flex-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+@mixin column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@mixin sizes($width, $height) {
+  width: $width;
+  height: $height;
+}

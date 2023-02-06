@@ -1,0 +1,320 @@
+@import "variables";
+@import "inicio";
+@import "deporte";
+@import "galeria";
+@import "mision";
+@import "contacto";
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0;
+}
+
+.icon {
+  position: fixed;
+  left: 0;
+
+  top: 55%;
+  z-index: 1000;
+}
+
+.social ul {
+  list-style-type: none;
+  padding: 0%;
+}
+
+.social ul li a {
+  display: inline-block;
+  color: white;
+  background: black;
+  padding: 10px 15px;
+  text-decoration: none;
+  transition: padding 1s;
+}
+.social ul li a:hover {
+  padding: 10px 30px;
+}
+.social ul li .icon-facebook {
+  background: #3b5998;
+}
+.social ul li .icon-twitter {
+  background: #00abf0;
+}
+.social ul li .icon-whatsapp {
+  background: #43d854;
+}
+.social ul li .icon-instagram {
+  background: #833ab4;
+} /*CSS general*/
+li a:hover {
+  color: white !important;
+}
+.bg-gradient-blue-green {
+  background-color: rgba(83, 184, 152, 1);
+  background-image: linear-gradient(
+    135deg,
+    rgba(47, 145, 224, 0.91),
+    rgba(7, 31, 51, 0.8) 25%
+  );
+  background-image: linear-gradient(
+    131deg,
+    rgba(28, 118, 173, 0.92),
+    rgba(83, 184, 153, 1)
+  );
+}
+
+/*CSS para la portada*/
+.index {
+  background-image: url(../img/portada.jpg);
+  background-size: cover;
+}
+.eslogan {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+  p {
+    border: thin solid black;
+    background-color: black;
+    box-shadow: 0px 0px 7px 7px;
+    padding-top: 15px;
+  }
+}
+//Deporte//
+.box-container {
+  display: flex;
+  margin-top: 50px;
+  .box-item {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    margin: 20px 35px;
+    text-align: justify;
+    .title {
+      font-size: $titulo-secundario;
+    }
+    .text {
+      color: $text;
+    }
+    .imagen-deporte {
+      width: 320px;
+      height: 300px;
+    }
+  }
+}
+.row-reverse {
+  flex-direction: row-reverse;
+}
+//Contacto//
+.section {
+  display: flex;
+  justify-content: center;
+
+  .card {
+    display: flex;
+    flex-flow: row wrap;
+
+    .card-body {
+      width: 15.5rem;
+
+      a {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        text-decoration: none;
+        color: black;
+      }
+      img {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+}
+.caja-contenedora {
+  width: 90vw;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  form {
+    border: 1px solid white;
+    width: 550px;
+    margin-top: 20px;
+    border-radius: 15px;
+    font-size: $list;
+    label {
+      display: block;
+    }
+    .form-1 {
+      margin-top: 0.5rem;
+      padding-left: 16%;
+    }
+    div input,
+    select,
+    textarea {
+      width: 15rem;
+      background-color: rgb(244, 238, 238);
+    }
+
+    .boton {
+      background-color: gainsboro;
+      width: 200px;
+      height: 30px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+/*CSS para las pages*/
+
+.titulo {
+  margin-left: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer {
+  height: auto;
+  padding: 20px 0px;
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.footer-index {
+  position: absolute;
+  bottom: 0%;
+  width: 100%;
+}
+
+@media (min-width: 320px) and (max-width: 700px) {
+  //Media queries para el footer//
+  footer {
+    display: flex;
+    width: 100%;
+  }
+  //Media queries para Galeria//
+  .box-recipe {
+    grid-template-columns: 300px;
+    row-gap: 2rem;
+  }
+
+  .box-container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .box-itm {
+    display: flex;
+    flex-direction: column;
+    .imagen-deporte {
+      width: 320px;
+      height: 200px;
+    }
+    .box-item:nth-child(even) {
+      order: 1;
+      margin: 0% auto;
+    }
+  }
+  .card-img img {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  li a {
+    padding-left: 10px;
+    transition: ease-in-out 1s;
+  }
+
+  li a:hover {
+    background-color: gray;
+  }
+
+  .media {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .media a:hover {
+    background-color: gray;
+  }
+  .media a {
+    transition: ease-in-out 0.5s;
+  }
+
+  .section {
+    flex-direction: column;
+    justify-content: center;
+
+    .card-body {
+      width: 6rem;
+    }
+  }
+  //Media queries para Contacto//
+  .caja-contenedora {
+    width: 100vw;
+    form {
+      width: 22rem;
+      input,
+      select,
+      textarea {
+        width: 8rem;
+
+        background-color: rgb(244, 238, 238);
+      }
+    }
+  }
+
+  //Media queries generales//
+
+  .social {
+    display: none;
+  }
+
+  .redes-sociales {
+    width: 25px !important;
+    height: 25px !important;
+    margin: 0% 5px;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 1024px) {
+  .box-recipe {
+    grid-template-columns: 300px 300px;
+    row-gap: 2rem;
+  }
+  .box-container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .box-item:nth-child(even) {
+    order: 2;
+  }
+  .redes-sociales {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .box-recipe {
+    grid-template-columns: repeat(3, 300px);
+    row-gap: 2rem;
+  }
+  .redes-sociales {
+    display: none;
+  }
+}

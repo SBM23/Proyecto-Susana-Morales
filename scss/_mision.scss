@@ -1,0 +1,294 @@
+.r320-576,
+.r577-992,
+.r993-1024,
+.r1025 {
+  display: none;
+}
+.mision {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 5%;
+  .text {
+    width: 40rem;
+    font-size: 1rem;
+    background: white;
+    box-shadow: 0px 0px 10px green;
+    margin-top: 2.5rem;
+    padding: 10px 10px;
+    position: absolute;
+    z-index: 1;
+    left: 7%;
+  }
+  .img-container {
+    display: flex;
+    justify-items: flex-end;
+    width: 40rem;
+    height: 30rem;
+    img {
+      width: 40rem;
+      position: absolute;
+      right: 7%;
+    }
+  }
+}
+
+article {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  .options {
+    display: flex;
+
+    color: $text;
+    flex-flow: column;
+    width: 20%;
+    margin: $espaciado;
+    h2 {
+      font-size: $titulo-secundario;
+    }
+    a {
+      text-decoration: none;
+      color: $enlaces;
+      font-weight: bold;
+      &:hover {
+        color: $text;
+      }
+    }
+  }
+}
+
+#comer-sano {
+  @include sizes(95vw, 200px);
+  @include box;
+  margin-left: 2%;
+  font-size: $titulo-primario;
+
+  text-align: center;
+  p {
+    font-size: $list;
+  }
+}
+
+//Estilo para Recetas//
+.receta {
+  display: flex;
+  justify-content: space-evenly;
+  margin: $espaciado;
+
+  h3 {
+    font-size: $titulo-secundario;
+    color: $text;
+    padding-top: 10px;
+  }
+  .imagen {
+    img {
+      @include sizes(550px, 350px);
+    }
+  }
+  ul {
+    li {
+      color: $text;
+      list-style-type: none;
+      align-content: center;
+    }
+    li::before {
+      content: "\2713   ";
+      font-size: $list;
+      color: white;
+    }
+  }
+}
+.receta-2 {
+  @extend .receta;
+}
+#sientase-bien {
+  @extend #comer-sano;
+  padding-top: 2rem;
+}
+
+.estres {
+  @extend .options;
+  margin-top: 7rem;
+}
+
+@media (min-width: 320px) and (max-width: 576px) {
+  //medias queries para pages Mision//
+  .mision {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .text {
+      @include sizes(90vw, 10rem);
+      margin: 0 auto;
+      position: static;
+      p {
+        font-size: 0.5rem;
+      }
+      .mision-principal {
+        font-size: 1rem;
+      }
+      .mision-secundario {
+        display: none;
+      }
+    }
+    .img-container {
+      width: 1vw;
+      height: 19rem;
+      img {
+        @include sizes(90vw, 10rem);
+        margin-top: 1rem;
+      }
+    }
+  }
+  article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 3rem;
+    .options {
+      width: 90vw;
+      margin: 15px 0;
+      font-size: 1rem;
+      margin-left: 3rem;
+      h2 {
+        font-size: $titulo-secundario;
+      }
+    }
+  }
+
+  #comer-sano {
+    @include sizes(90vw, 8rem);
+    padding: 1rem;
+    margin: 1rem auto;
+
+    h2 {
+      font-size: $list;
+      padding: 0%;
+    }
+    p {
+      font-size: 0.55rem;
+      text-align: justify;
+    }
+  }
+
+  .receta {
+    @include column;
+    margin: 0 auto;
+    .imagen {
+      img {
+        @include sizes(90vw, 170px);
+        margin-left: 1.5rem;
+      }
+    }
+  }
+}
+@media (min-width: 577px) and (max-width: 992px) {
+  .mision {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .text {
+      @include sizes(50rem, 18rem);
+      margin: 0 auto;
+      position: static;
+      p {
+        font-size: 1rem;
+      }
+    }
+    .img-container {
+      width: 1vw;
+      height: 19rem;
+      img {
+        @include sizes(45rem, 17rem);
+        margin-top: 1rem;
+        margin-left: 3%;
+      }
+    }
+  }
+  article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+    .options {
+      width: 50%;
+
+      font-size: 1rem;
+      h2 {
+        font-size: $titulo-secundario;
+      }
+    }
+  }
+
+  #comer-sano {
+    @include sizes(95vw, 12rem);
+    padding: 1rem;
+
+    h2 {
+      font-size: $list;
+      padding: 0%;
+    }
+    p {
+      font-size: $list;
+      text-align: justify;
+    }
+  }
+
+  .receta {
+    @include column;
+    margin: $espaciado;
+    .imagen {
+      img {
+        @include sizes(35rem, 9rempx);
+        margin-left: 35px;
+      }
+    }
+  }
+}
+@media (min-width: 993px) and (max-width: 1024px) {
+  article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 3rem;
+    .options {
+      width: 30%;
+      margin: 15px 0;
+      font-size: 1rem;
+      h2 {
+        font-size: $titulo-secundario;
+      }
+    }
+  }
+
+  #comer-sano {
+    @include sizes(95vw, 10rem);
+    margin-left: 0%;
+
+    h2 {
+      font-size: $list;
+      padding: 0%;
+    }
+    p {
+      font-size: $list;
+      text-align: justify;
+    }
+  }
+
+  .receta {
+    @include column;
+    margin: 0 auto;
+    .imagen {
+      img {
+        @include sizes(250px, 170px);
+        margin-left: 35px;
+      }
+    }
+  }
+}

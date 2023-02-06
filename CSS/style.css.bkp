@@ -1,0 +1,333 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0;
+}
+
+.icon {
+  position: fixed;
+  left: 0;
+
+  top: 55%;
+  z-index: 1000;
+}
+
+.social ul {
+  list-style-type: none;
+  padding: 0%;
+}
+
+.social ul li a {
+  display: inline-block;
+  color: white;
+  background: black;
+  padding: 10px 15px;
+  text-decoration: none;
+  transition: padding 1s;
+}
+.social ul li a:hover {
+  padding: 10px 30px;
+}
+.social ul li .icon-facebook {
+  background: #3b5998;
+}
+.social ul li .icon-twitter {
+  background: #00abf0;
+}
+.social ul li .icon-whatsapp {
+  background: #43d854;
+}
+.social ul li .icon-instagram {
+  background: #833ab4;
+} /*CSS general*/
+li a:hover {
+  color: white !important;
+}
+.bg-gradient-blue-green {
+  background-color: rgba(83, 184, 152, 1);
+  background-image: linear-gradient(
+    135deg,
+    rgba(47, 145, 224, 0.91),
+    rgba(7, 31, 51, 0.8) 25%
+  );
+  background-image: linear-gradient(
+    131deg,
+    rgba(28, 118, 173, 0.92),
+    rgba(83, 184, 153, 1)
+  );
+}
+
+/*CSS para la portada*/
+.index {
+  background-image: url(../img/portada.jpg);
+  background-size: cover;
+}
+
+.eslogan {
+  color: white;
+  height: 20rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+.eslogan p {
+  width: 45rem;
+  height: 4rem;
+  border: thin solid black;
+  background-color: black;
+  box-shadow: 0px 0px 7px 7px;
+  padding-top: 15px;
+}
+/*CSS para las pages*/
+
+.titulo {
+  margin-left: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*CSS para Nuestra Misión*/
+
+.mision {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 15%;
+}
+
+.text {
+  width: 40rem;
+  height: 20rem;
+  font-size: 1rem;
+  background: white;
+  box-shadow: 0px 0px 10px green;
+  margin-top: 2.5rem;
+  padding: 10px 10px;
+  position: absolute;
+  z-index: 1;
+  left: 7%;
+}
+
+.img-container {
+  display: flex;
+  justify-items: flex-end;
+  width: 40rem;
+  height: 30rem;
+}
+
+.img-container img {
+  width: 40rem;
+  position: absolute;
+  right: 7%;
+}
+
+/*CSS para el formulario*/
+form {
+  width: 600px;
+  margin-top: 20px;
+  border-radius: 15px;
+  font-size: 1.2rem;
+  background-color: rgb(128, 128, 128, 0.5);
+}
+
+.caja-contenedora {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+label {
+  display: block;
+}
+
+.form-1 {
+  margin-top: 0.5rem;
+}
+
+div input {
+  width: 550px;
+  height: 35px;
+  background-color: rgb(244, 238, 238);
+}
+
+select {
+  width: 550px;
+  height: 35px;
+}
+
+textarea {
+  width: 550px;
+}
+
+.boton {
+  background-color: gainsboro;
+  width: 200px;
+  height: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/*CSS para Salud*/
+
+.box-container {
+  display: flex;
+  margin-top: 50px;
+}
+
+.box-item {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  margin: 20px 50px;
+  text-align: justify;
+}
+.row-reverse {
+  flex-direction: row-reverse;
+}
+
+.title {
+  font-size: 1.5rem;
+}
+
+.imagen-deporte {
+  width: 450px;
+  height: 300px;
+}
+
+/*CSS para Galeria*/
+.box-recipe {
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+
+  justify-content: center;
+  justify-items: center;
+  margin-top: 50px;
+  column-gap: 10px;
+  row-gap: 10px;
+}
+
+.card {
+  box-shadow: 0px 0px 8px rgb(206, 206, 206);
+}
+
+.card img {
+  width: 15rem;
+  height: 15rem;
+}
+
+.card p {
+  color: #777;
+  font-size: 1.1em;
+  font-style: italic;
+  text-align: center;
+}
+footer {
+  background-color: gray;
+  height: auto;
+  padding: 20px 0px;
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.footer-index {
+  position: absolute;
+  bottom: 0%;
+  width: 100%;
+}
+
+@media (min-width: 320px) and (max-width: 700px) {
+  footer {
+    display: flex;
+    width: auto;
+
+    background-color: gray;
+  }
+  .box-recipe {
+    grid-template-columns: 300px;
+    row-gap: 2rem;
+  }
+
+  .box-container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .box-item:nth-child(even) {
+    order: 2;
+  }
+  .card img {
+    width: 10rem;
+    height: 10rem;
+  }
+  .imagen-deporte {
+    width: 300px;
+    height: 200px;
+  }
+  li a {
+    padding-left: 10px;
+    transition: ease-in-out 1s;
+  }
+
+  li a:hover {
+    background-color: gray;
+  }
+
+  .media {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .media a:hover {
+    background-color: gray;
+  }
+  .media a {
+    transition: ease-in-out 0.5s;
+  }
+
+  .social {
+    display: none;
+  }
+
+  .redes-sociales {
+    width: 25px !important;
+    height: 25px !important;
+    margin: 0% 5px;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 1000px) {
+  .box-recipe {
+    grid-template-columns: 300px 300px;
+    row-gap: 2rem;
+  }
+  .box-container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .box-item:nth-child(even) {
+    order: 2;
+  }
+  .redes-sociales {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .box-recipe {
+    grid-template-columns: repeat(3, 300px);
+    row-gap: 2rem;
+  }
+
+  .redes-sociales {
+    display: none;
+  }
+}
