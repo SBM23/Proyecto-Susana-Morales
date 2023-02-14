@@ -1,2 +1,26 @@
-main {
+.box-container {
+  display: flex;
+  margin-top: 50px;
+  .box-item {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    margin: 1rem 3rem;
+    text-align: justify;
+    .title {
+      font-size: $titulo-secundario;
+    }
+
+    .text {
+      color: $text;
+    }
+
+    .imagen-deporte {
+      width: 25rem;
+      height: 20rem;
+    }
+  }
+}
+.row-reverse {
+  flex-direction: row-reverse;
 }

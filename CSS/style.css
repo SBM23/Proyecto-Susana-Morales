@@ -1,20 +1,9 @@
 @charset "UTF-8";
-.eslogan {
-  margin-top: 6rem;
-  background-color: white;
-  color: black;
-  border: thin solid;
-  box-shadow: 0px 0px 10px green;
-  width: 60vw;
-  align-content: center;
-  margin-left: 20%;
-}
-.eslogan p {
-  font-size: 1.5rem;
-  border: thin solid black;
-  background-color: black;
-  box-shadow: 0px 0px 7px 7px;
-  margin-top: 20%;
+h1 {
+  width: 100vw;
+  color: white;
+  text-shadow: 5px 5px 0px black;
+  margin-top: 10%;
 }
 
 @media (min-width: 320px) and (max-width: 992px) {
@@ -25,11 +14,36 @@
     background-position: center;
   }
   .eslogan {
-    width: 70vw;
     font-size: 1.2rem;
     margin: 20% auto;
   }
 }
+.box-container {
+  display: flex;
+  margin-top: 50px;
+}
+.box-container .box-item {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  margin: 1rem 3rem;
+  text-align: justify;
+}
+.box-container .box-item .title {
+  font-size: 1.5rem;
+}
+.box-container .box-item .text {
+  color: white;
+}
+.box-container .box-item .imagen-deporte {
+  width: 25rem;
+  height: 20rem;
+}
+
+.row-reverse {
+  flex-direction: row-reverse;
+}
+
 .box-recipe {
   display: grid;
   grid-template-columns: repeat(3, 300px);
@@ -167,7 +181,7 @@ article .options a:hover, article .estres a:hover {
   }
   .mision .text {
     width: 90vw;
-    height: 10rem;
+    height: auto;
     margin: 0 auto;
     position: static;
   }
@@ -199,7 +213,7 @@ article .options a:hover, article .estres a:hover {
     width: 90vw;
     margin: 15px 0;
     font-size: 1rem;
-    margin-left: 3rem;
+    margin-left: 1rem;
   }
   article .options h2, article .estres h2 {
     font-size: 1.5rem;
@@ -227,7 +241,10 @@ article .options a:hover, article .estres a:hover {
   .receta .imagen img, .receta-2 .imagen img {
     width: 90vw;
     height: 170px;
-    margin-left: 1.5rem;
+    margin-left: 1rem;
+  }
+  .receta ul, .receta-2 ul {
+    margin-left: 0.5rem;
   }
 }
 @media (min-width: 577px) and (max-width: 992px) {
@@ -335,6 +352,101 @@ article .options a:hover, article .estres a:hover {
     margin-left: 35px;
   }
 }
+.section {
+  display: flex;
+  justify-content: center;
+}
+.section .card {
+  display: flex;
+  flex-flow: row wrap;
+}
+.section .card .card-body {
+  width: 15.5rem;
+}
+.section .card .card-body a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: black;
+}
+.section .card .card-body img {
+  width: 30px;
+  height: 30px;
+}
+
+.caja-contenedora {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.caja-contenedora form {
+  border: 1px solid white;
+  width: 550px;
+  margin-top: 20px;
+  border-radius: 15px;
+  font-size: 1.2rem;
+}
+.caja-contenedora form label {
+  display: block;
+}
+.caja-contenedora form .form-1 {
+  margin-top: 0.5rem;
+}
+.caja-contenedora form input::placeholder,
+.caja-contenedora form select::placeholder,
+.caja-contenedora form textarea::placeholder {
+  color: white;
+}
+.caja-contenedora form input:not([type=submit]):focus,
+.caja-contenedora form select:focus,
+.caja-contenedora form textarea:focus {
+  border-bottom: 2px solid rgba(255, 255, 0, 0.722);
+}
+.caja-contenedora form div input:not([type=submit]),
+.caja-contenedora form select,
+.caja-contenedora form textarea {
+  width: 80%;
+  margin: 4rem 3rem;
+  display: block;
+  border: 0px;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0);
+  border-bottom: 1px solid white;
+  outline: none;
+  color: white;
+}
+.caja-contenedora form div input:not([type=submit])::placeholder,
+.caja-contenedora form select::placeholder,
+.caja-contenedora form textarea::placeholder {
+  color: white;
+}
+.caja-contenedora form select:hover,
+.caja-contenedora form .boton:hover {
+  background-color: transparent;
+  color: #367f9c;
+}
+.caja-contenedora form .boton {
+  background-color: rgb(255, 255, 255);
+  border: 1px solid white;
+  border-radius: 4px;
+  display: block;
+  width: 200px;
+  margin-top: 10px;
+  margin: 0px auto;
+  margin-bottom: 10px;
+  line-height: 2rem;
+}
+.caja-contenedora form .boton:hover {
+  color: white;
+  border: 2px solid white;
+}
+
 * {
   box-sizing: border-box;
   margin: 0px;
@@ -410,95 +522,6 @@ li a:hover {
   padding-top: 15px;
 }
 
-.box-container {
-  display: flex;
-  margin-top: 50px;
-}
-.box-container .box-item {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-  margin: 20px 35px;
-  text-align: justify;
-}
-.box-container .box-item .title {
-  font-size: 1.5rem;
-}
-.box-container .box-item .text {
-  color: white;
-}
-.box-container .box-item .imagen-deporte {
-  width: 320px;
-  height: 300px;
-}
-
-.row-reverse {
-  flex-direction: row-reverse;
-}
-
-.section {
-  display: flex;
-  justify-content: center;
-}
-.section .card {
-  display: flex;
-  flex-flow: row wrap;
-}
-.section .card .card-body {
-  width: 15.5rem;
-}
-.section .card .card-body a {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  text-decoration: none;
-  color: black;
-}
-.section .card .card-body img {
-  width: 30px;
-  height: 30px;
-}
-
-.caja-contenedora {
-  width: 90vw;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.caja-contenedora form {
-  border: 1px solid white;
-  width: 550px;
-  margin-top: 20px;
-  border-radius: 15px;
-  font-size: 1.2rem;
-}
-.caja-contenedora form label {
-  display: block;
-}
-.caja-contenedora form .form-1 {
-  margin-top: 0.5rem;
-  padding-left: 16%;
-}
-.caja-contenedora form div input,
-.caja-contenedora form select,
-.caja-contenedora form textarea {
-  width: 15rem;
-  background-color: rgb(244, 238, 238);
-}
-.caja-contenedora form .boton {
-  background-color: gainsboro;
-  width: 200px;
-  height: 30px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-/*CSS para las pages*/
 .titulo {
   margin-left: 40%;
   display: flex;
@@ -535,20 +558,19 @@ footer {
     row-gap: 2rem;
   }
   .box-container {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-  .box-itm {
     display: flex;
     flex-direction: column;
   }
-  .box-itm .imagen-deporte {
-    width: 320px;
-    height: 200px;
+  .box-item {
+    display: flex;
+    flex-direction: column;
   }
-  .box-itm .box-item:nth-child(even) {
+  .box-item .imagen-deporte {
+    min-width: 90vw;
+    height: 20rem;
+  }
+  .box-item .box-item:nth-child(even) {
     order: 1;
-    margin: 0% auto;
   }
   .card-img img {
     width: 10rem;
@@ -581,16 +603,62 @@ footer {
     width: 6rem;
   }
   .caja-contenedora {
-    width: 100vw;
+    width: 90vw;
+    margin: 0 auto;
   }
   .caja-contenedora form {
     width: 22rem;
   }
-  .caja-contenedora form input,
-  .caja-contenedora form select,
-  .caja-contenedora form textarea {
-    width: 8rem;
-    background-color: rgb(244, 238, 238);
+  .caja-contenedora form input::placeholder,
+  .caja-contenedora form select::placeholder,
+  .caja-contenedora form textarea::placeholder {
+    color: white;
+  }
+  .caja-contenedora form input input:not([type=submit]):focus,
+  .caja-contenedora form input select:focus,
+  .caja-contenedora form input textarea:focus,
+  .caja-contenedora form select input:not([type=submit]):focus,
+  .caja-contenedora form select select:focus,
+  .caja-contenedora form select textarea:focus,
+  .caja-contenedora form textarea input:not([type=submit]):focus,
+  .caja-contenedora form textarea select:focus,
+  .caja-contenedora form textarea textarea:focus {
+    border-bottom: 2px solid rgba(255, 255, 0, 0.722);
+  }
+  .caja-contenedora form input input:not([type=submit]),
+  .caja-contenedora form input select,
+  .caja-contenedora form input textarea,
+  .caja-contenedora form select input:not([type=submit]),
+  .caja-contenedora form select select,
+  .caja-contenedora form select textarea,
+  .caja-contenedora form textarea input:not([type=submit]),
+  .caja-contenedora form textarea select,
+  .caja-contenedora form textarea textarea {
+    width: 100vw;
+    margin: 4rem 3rem;
+    display: block;
+    border: 0px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0);
+    border-bottom: 1px solid white;
+    outline: none;
+    color: white;
+  }
+  .caja-contenedora form input input:not([type=submit])::placeholder,
+  .caja-contenedora form input select::placeholder,
+  .caja-contenedora form input textarea::placeholder,
+  .caja-contenedora form select input:not([type=submit])::placeholder,
+  .caja-contenedora form select select::placeholder,
+  .caja-contenedora form select textarea::placeholder,
+  .caja-contenedora form textarea input:not([type=submit])::placeholder,
+  .caja-contenedora form textarea select::placeholder,
+  .caja-contenedora form textarea textarea::placeholder {
+    color: white;
+  }
+  .caja-contenedora form select:hover,
+  .caja-contenedora form .boton:hover {
+    background-color: transparent;
+    color: #367f9c;
   }
   .social {
     display: none;

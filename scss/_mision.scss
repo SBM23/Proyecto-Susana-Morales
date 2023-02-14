@@ -121,7 +121,7 @@ article {
     justify-content: center;
 
     .text {
-      @include sizes(90vw, 10rem);
+      @include sizes(90vw, auto);
       margin: 0 auto;
       position: static;
       p {
@@ -152,7 +152,7 @@ article {
       width: 90vw;
       margin: 15px 0;
       font-size: 1rem;
-      margin-left: 3rem;
+      margin-left: 1rem;
       h2 {
         font-size: $titulo-secundario;
       }
@@ -180,8 +180,11 @@ article {
     .imagen {
       img {
         @include sizes(90vw, 170px);
-        margin-left: 1.5rem;
+        margin-left: 1rem;
       }
+    }
+    ul {
+      margin-left: 0.5rem;
     }
   }
 }

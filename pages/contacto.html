@@ -52,7 +52,7 @@
     <header>
       <nav class="navbar navbar-expand-lg bg-light">
         <div class="container">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="../index.html">
             <h2 class="fs-2 text-center">SB<sup class="fs-5">fit</sup></h2>
             <h2 class="fs-5">Salud y Vida</h2></a
           >
@@ -153,31 +153,28 @@
         <div class="container-form">
           <h2 class="h2 text-center text-white mt-5">FORMULARIO DE CONTACTO</h2>
           <div class="form-1">
-            <label class="text-white">Nombre y Apellido</label>
-            <input type="text" />
+            <input type="text" placeholder="Nombre y Apellido" />
           </div>
           <div class="form-1">
-            <label for="" class="text-white">Fecha de Nacimiento</label>
             <input type="date" />
           </div>
           <div class="form-1">
-            <label for="region" class="text-white">País</label>
-            <select name="" id="">
-              <option value="">Argentina</option>
-              <option value="">Bolivia</option>
-              <option value="">Brasil</option>
-              <option value="">Chile</option>
-              <option value="">Colombia</option>
-              <option value="">Venezuela</option>
-              <option value="">Peru</option>
+            <select name="region" id="region" placeholder="Selecciona un País">
+              <option disabled selected>Selecciona una opción</option>
+              <option value="argentina">Argentina</option>
+              <option value="bolivia">Bolivia</option>
+              <option value="brasil">Brasil</option>
+              <option value="chile">Chile</option>
+              <option value="colombia">Colombia</option>
+              <option value="venezuela">Venezuela</option>
+              <option value="peru">Peru</option>
             </select>
           </div>
           <div class="form-1">
-            <label for="Correo" class="text-white">Correo</label>
-            <input type="email" />
+            <input type="email" placeholder="Introduce un correo válido" />
           </div>
           <div class="form-1">
-            <textarea name="comentario" id="" cols="30" rows="10">
+            <textarea name="comentario" id="comentario" cols="30" rows="10">
 Escriba su comentario</textarea
             >
             <label for="coment"></label>
